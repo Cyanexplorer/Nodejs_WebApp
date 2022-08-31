@@ -14,8 +14,8 @@ on:
   workflow_dispatch:
 
 env: 
-  BRANCH: ${{ github.ref }}
-  GITHUB_REF_NAME: ${{github}}
+  BRANCH: 11
+  GITHUB_REF_NAME: 22
    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,7 +36,7 @@ jobs:
       - run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo $BRANCH
+          echo ${{ github.ref }}
           echo ${BRANCH}
           echo ${GITHUB_REF_NAME}
           echo $GITHUB_REF_NAME
