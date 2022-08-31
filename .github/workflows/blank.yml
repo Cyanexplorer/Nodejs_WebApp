@@ -13,8 +13,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 env:
-  BUILD_NUMBER: ${$GITHUB_REF_NAME}
-  BRANCH: ${$GITHUB_RUN_NUMBER}
+  BUILD_NUMBER: $GITHUB_REF_NAME
+  BRANCH: $GITHUB_RUN_NUMBER
    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,8 +36,8 @@ jobs:
       - run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo $BUILD_NUMBER
-          echo $BRANCH
+          echo ${BUILD_NUMBER}
+          echo ${BRANCH}
           
       - uses: actions/upload-artifact@v3
         with:
