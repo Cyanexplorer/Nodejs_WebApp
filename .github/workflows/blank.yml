@@ -25,8 +25,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: cat $GITHUB_REF_NAME >> $BUILD_NUMBER
-      - run: cat $GITHUB_RUN_NUMBER >> $GITHUB_RUN_NUMBER
+      - run: cat $GITHUB_REF_NAME 
+      - run: cat $GITHUB_RUN_NUMBER 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
