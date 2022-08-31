@@ -36,8 +36,8 @@ jobs:
       - run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo $BUILD_NUMBER 
-          echo $GITHUB_REF_NAME 
+          echo ${BUILD_NUMBER} 
+          echo ${GITHUB_REF_NAME} 
           
       - uses: actions/upload-artifact@v3
         with:
