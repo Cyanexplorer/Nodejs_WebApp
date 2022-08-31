@@ -32,12 +32,13 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      - run: cat ${{ github.ref }} > $bb
       # Runs a set of commands using the runners shell
       - run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           echo ${{ github.ref }}
-          echo ${BRANCH}
+          echo $bb
           echo ${GITHUB_REF_NAME}
           echo $GITHUB_REF_NAME
           
