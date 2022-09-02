@@ -9,5 +9,5 @@ runs:
   using: "composite"
   steps:
     - name: ID
-      run: echo $ID
+      run: echo 'PP=555' >> $GITHUB_ENV
       shell: bash
