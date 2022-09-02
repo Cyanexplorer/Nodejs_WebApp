@@ -10,3 +10,4 @@ runs:
   steps:
     - name: ID
       run: echo $ID
+      shell: bash
