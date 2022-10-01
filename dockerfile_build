@@ -1,0 +1,10 @@
+FROM centos:7
+
+# Java
+RUN yum install -y java-1.7.0-openjdk java-1.7.0-openjdk-devel
+RUN yum install -y maven-3.0.5
+
+# RPM build
+RUN yum install -y redhat-lsb.x86_64
+
+CMD ["/bin/bash"]
