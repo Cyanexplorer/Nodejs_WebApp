@@ -25,7 +25,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@V3
+    - uses: actions/checkout@v3
     - run: |
         docker build -t test:docker -f dockerfile_build .
         docker run  -v `pwd`:/tmp/project \
