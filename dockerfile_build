@@ -7,4 +7,6 @@ RUN yum install -y maven-3.0.5
 # RPM build
 RUN yum install -y redhat-lsb.x86_64
 
+RUN yum install -y wget
+
 CMD ["/bin/bash"]
