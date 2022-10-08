@@ -30,6 +30,6 @@ jobs:
         docker build -t test:docker -f dockerfile_build .
         docker run  -v `pwd`:/tmp/project \
                   -t test:docker  \
-                  /bin/bash -c "cd /tmp/project && wget https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/org/codehaus/jackson/jackson-mapper-asl/1.9.15-TALEND/jackson-mapper-asl-1.9.15-TALEND.jar"
+                  /bin/bash -c "cd /tmp/project && mvn package"
       
 
